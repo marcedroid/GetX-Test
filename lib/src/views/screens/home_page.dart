@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
 import 'package:getx_demo/src/business_logic/controllers/home_controller.dart';
-import 'package:getx_demo/src/views/widgets/home_counter_widget.dart';
+import 'package:getx_demo/src/views/widgets/home_list_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -14,9 +14,7 @@ class HomePage extends StatelessWidget {
           appBar: AppBar(
             title: Text('GetX Demo'),
           ),
-          body: Center(
-            child: HomeCounterWidget(),
-          ),
+          body: HomeListWidget(),
           floatingActionButton: FloatingActionButton(
             onPressed: () => _.increment(),
             child: Icon(Icons.add),

@@ -6,9 +6,11 @@ import 'package:getx_demo/src/business_logic/utils/constants.dart' as Constants;
 class HomeCounterWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeController>(
-      id: Constants.HOME_COUNTER,
-      builder: (_) => Text('${_.counter}'),
+    return Center(
+      child: GetBuilder<HomeController>(
+        id: Constants.HOME_COUNTER,
+        builder: (_) => Text('${_.counter}'),
+      ),
     );
   }
 }
