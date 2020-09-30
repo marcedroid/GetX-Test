@@ -8,6 +8,6 @@ class HomeController extends GetxController {
 
   void increment() {
     _counter++;
-    update([Constants.HOME_COUNTER]);
+    update([Constants.HOME_COUNTER], _counter >= 5);
   }
 }

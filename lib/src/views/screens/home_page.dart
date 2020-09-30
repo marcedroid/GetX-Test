@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
 import 'package:getx_demo/src/business_logic/controllers/home_controller.dart';
-import 'package:getx_demo/src/business_logic/utils/constants.dart' as Constants;
+import 'package:getx_demo/src/views/widgets/home_counter_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -15,10 +15,7 @@ class HomePage extends StatelessWidget {
             title: Text('GetX Demo'),
           ),
           body: Center(
-            child: GetBuilder<HomeController>(
-              id: Constants.HOME_COUNTER,
-              builder: (_) => Text('${_.counter}'),
-            ),
+            child: HomeCounterWidget(),
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () => _.increment(),
