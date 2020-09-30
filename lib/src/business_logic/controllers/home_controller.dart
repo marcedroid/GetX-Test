@@ -1,4 +1,5 @@
 import 'package:get/state_manager.dart';
+import 'package:getx_demo/src/business_logic/utils/constants.dart' as Constants;
 
 class HomeController extends GetxController {
   int _counter = 0;
@@ -7,6 +8,6 @@ class HomeController extends GetxController {
 
   void increment() {
     _counter++;
-    update();
+    update([Constants.HOME_COUNTER]);
   }
 }
