@@ -1,7 +1,9 @@
+import 'package:get/route_manager.dart';
 import 'package:get/state_manager.dart';
 import 'package:getx_demo/src/business_logic/models/user.dart';
 import 'package:getx_demo/src/business_logic/services/api_services/user_api.dart';
 import 'package:getx_demo/src/business_logic/utils/constants.dart' as Constants;
+import 'package:getx_demo/src/views/screens/profile_page.dart';
 
 class HomeController extends GetxController {
   int _counter = 0;
@@ -22,6 +24,10 @@ class HomeController extends GetxController {
     _users = users;
     _isLoading = false;
     update([Constants.HOME_USERS]);
+  }
+
+  void goToProfilePage(User user) {
+    Get.to(ProfilePage(), arguments: user);
   }
 
   @override

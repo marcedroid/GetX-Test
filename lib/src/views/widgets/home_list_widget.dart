@@ -22,6 +22,7 @@ class HomeListWidget extends StatelessWidget {
             return ListTile(
               title: Text('${user.firstName} ${user.lastName}'),
               subtitle: Text(user.email),
+              onTap: () => _.goToProfilePage(user),
             );
           },
         );
